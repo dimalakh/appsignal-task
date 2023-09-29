@@ -1,11 +1,29 @@
-import Tooltip from  "@/components/Tooltip"
+import MetadataDistributionItem from "@/components/MetadataDistributionItem";
+import { getColorsArr } from "@/utils/colors";
+
+const colorsArr = getColorsArr();
 
 export default function MetadataDistributions({ distributions }) {
   return (
-    <div>
-      <Tooltip content="I'm a tooltip" ><h2>Metadata distributions</h2></Tooltip>
+    <div className="max-w-sm border rounded">
+      <div className="flex space justify-between p-4">
+        <h2 className="font-semibold">Attribute distribution</h2>
 
-      <pre>{JSON.stringify(distributions, null, 2)}</pre>
+        <a href="#" className="text-blue-500 hover:text-blue-700 underline">All attributes</a>
+      </div>
+
+      <div>
+        {distributions.map((distribution, i) => (
+          <MetadataDistributionItem
+            key={distribution.name}
+            name={distribution.name}
+            unique={distribution.unique}
+            total={distribution.total}
+            data={distribution.distributions}
+            color={colorsArr[i]}
+          />
+        ))}
+      </div>
     </div>
   );
 }

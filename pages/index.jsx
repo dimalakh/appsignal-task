@@ -4,5 +4,5 @@ import MetadataDistributions from "@/components/MetadataDistributions"
 export default function Home() {
   const { app: distributions } = dataFromGraphql
 
-  return <MetadataDistributions distributions={distributions} />
+  return <MetadataDistributions distributions={distributions.metadataDistributions} />
 }
