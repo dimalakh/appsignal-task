@@ -5,7 +5,7 @@ const colorsArr = getColorsArr();
 
 export default function MetadataDistributions({ distributions }) {
   return (
-    <div className="max-w-sm border rounded">
+    <div className="max-w-sm border rounded-md m-4 bg-white">
       <div className="flex space justify-between p-4">
         <h2 className="font-semibold">Attribute distribution</h2>
 
