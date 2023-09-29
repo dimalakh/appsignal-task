@@ -7,9 +7,9 @@ export default function MetadataDistributions({ distributions }) {
   return (
     <div className="max-w-sm border rounded-md m-4 bg-white">
       <div className="flex space justify-between p-4">
-        <h2 className="font-semibold">Attribute distribution</h2>
+        <h2 className="font-semibold">Metadata distributions</h2>
 
-        <a href="#" className="text-blue-500 hover:text-blue-700 underline">All attributes</a>
+        <a href="#" className="text-blue-500 hover:text-blue-700 underline">All distributions</a>
       </div>
 
       <div>
